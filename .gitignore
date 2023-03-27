@@ -1,0 +1,20 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+*.hcl
+
+# .tfvars files
+*.tfvars
+
+hello
+
+sandbox/volume/
+
+*.zip
+dist/
+*.html
+c.out

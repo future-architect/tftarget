@@ -1,8 +1,8 @@
 # tftarget
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Go Reference](https://pkg.go.dev/badge/github.com/orangekame3/tftarget.svg)](https://pkg.go.dev/github.com/orangekame3/tftarget)
-[![release](https://github.com/orangekame3/tftarget/actions/workflows/release.yml/badge.svg)](https://github.com/orangekame3/tftarget/actions/workflows/release.yml)
-[![tagpr](https://github.com/orangekame3/tftarget/actions/workflows/tagpr.yml/badge.svg)](https://github.com/orangekame3/tftarget/actions/workflows/tagpr.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/future-architect/tftarget.svg)](https://pkg.go.dev/github.com/future-architect/tftarget)
+[![release](https://github.com/future-architect/tftarget/actions/workflows/release.yml/badge.svg)](https://github.com/future-architect/tftarget/actions/workflows/release.yml)
+[![tagpr](https://github.com/future-architect/tftarget/actions/workflows/tagpr.yml/badge.svg)](https://github.com/future-architect/tftarget/actions/workflows/tagpr.yml)
 
 
 A Terraform ( plan | apply | destroy ) target tool
@@ -28,7 +28,7 @@ The tftarget invokes the Terraform command, so Terraform must be installed on th
 We have prepared a sandbox environment where Terraform can be run in a Docker environment, so please clone the repository and try it out.
 
 ```shell
-$ git clone https://github.com/orangekame3/tftarget.git
+$ git clone https://github.com/future-architect/tftarget.git
 ```
 
 First, build localstack
@@ -57,20 +57,20 @@ Once you have reached this point, the preparation is complete.
 ### Go
 
 ```shell
-$ go install github.com/orangekame3/tftarget@latest
+$ go install github.com/future-architect/tftarget@latest
 ```
 
 ### Homebrew
 
 ```shell
-$ brew install orangekame3/tap/tftarget
+$ brew install future-architect/tap/tftarget
 ```
 
 ### Download
 
 Download the latest compiled binaries and put it anywhere in your executable path.
 
-https://github.com/orangekame3/tftarget/releases
+https://github.com/future-architect/tftarget/releases
 
 ## Usage
 
@@ -188,4 +188,3 @@ tftarget apply -s false
 
 ## License
 MIT
-# tftarget

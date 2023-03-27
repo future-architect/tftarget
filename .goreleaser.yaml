@@ -41,11 +41,6 @@ changelog:
 
 brews:
   - tap:
-      owner: orangekame3
+      owner: future-architect
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
-
-# The lines beneath this are called `modelines`. See `:help modeline`
-# Feel free to remove those if you don't want/use them.
-# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
-# vim: set ts=2 sw=2 tw=0 fo=cnqoj

@@ -6,7 +6,7 @@ package main
 import (
 	"time"
 
-	"github.com/orangekame3/tftarget/cmd"
+	"github.com/future-architect/tftarget/cmd"
 )
 
 var (

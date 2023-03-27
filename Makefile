@@ -10,7 +10,7 @@ destroy:
 	cd sandbox && go run ../main.go destroy
 
 install:
-	go install github.com/orangekame3/tftarget@latest
+	go install github.com/future-architect/tftarget@latest
 
 localstack:
 	cd sandbox && docker compose -f compose.yml up -d localstack

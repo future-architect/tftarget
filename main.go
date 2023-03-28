@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 orangekame3 miya.org.0309@gmai.com
+Copyright © 2023 Takafumi Miyanaga miya.org.0309@gmai.com
 */
 package main
 

@@ -12,6 +12,8 @@ A Terraform ( plan | apply | destroy ) target tool
 ## Features
 You can interactivity select resource to ( plan | apply | destroy ) with target option. 
 
+[日本語の紹介記事はこちら](https://future-architect.github.io/articles/20230329a/)
+
 ## tftarget plan
 ![tftarget-plan](./capture/tftarget-plan.gif)
 

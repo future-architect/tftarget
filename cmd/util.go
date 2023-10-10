@@ -90,14 +90,14 @@ func slice2String(slice []string) string {
 		buffer.WriteString(slice[0])
 		return buffer.String()
 	}
-	buffer.WriteString(`{`)
+	buffer.WriteString(`{'`)
 	for i, item := range slice {
 		buffer.WriteString(item)
 		if i < len(slice)-1 {
-			buffer.WriteString(",")
+			buffer.WriteString("','")
 		}
 	}
-	buffer.WriteString(`}`)
+	buffer.WriteString(`'}`)
 	return buffer.String()
 }
 

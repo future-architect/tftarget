@@ -164,8 +164,8 @@ func Test_slice2String(t *testing.T) {
 	}{
 		{
 			name:  "スライスをストリングに変換",
-			input: []string{"aws_iam_role_policy_attachment.local_poilcy_attachment", "aws_lambda_function.local_lambda", "aws_iam_policy.local_policy", "aws_lambda_event_source_mapping.local_mapping"},
-			want:  "{aws_iam_role_policy_attachment.local_poilcy_attachment,aws_lambda_function.local_lambda,aws_iam_policy.local_policy,aws_lambda_event_source_mapping.local_mapping}",
+			input: []string{"aws_iam_role_policy_attachment.local_poilcy_attachment", "aws_lambda_function.local_lambda", "aws_iam_policy.local_policy", "aws_lambda_event_source_mapping.local_mapping", "aws_lambda_function.lambda_set[\"test\"]"},
+			want:  "{'aws_iam_role_policy_attachment.local_poilcy_attachment','aws_lambda_function.local_lambda','aws_iam_policy.local_policy','aws_lambda_event_source_mapping.local_mapping','aws_lambda_function.lambda_set[\"test\"]'}",
 		},
 	}
 	for _, tt := range tests {

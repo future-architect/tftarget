@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.4](https://github.com/future-architect/tftarget/compare/v0.0.3...v0.0.4) - 2023-10-14
+- version-up by @orangekame3 in https://github.com/future-architect/tftarget/pull/18
+
 ## [v0.0.3](https://github.com/future-architect/tftarget/compare/v0.0.2...v0.0.3) - 2023-10-14
 - Wrap targets in single quotes / escape quotation marks by @carlossless in https://github.com/future-architect/tftarget/pull/17
 

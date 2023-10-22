@@ -11,6 +11,6 @@ import (
 
 
 func main() {
-	cmd.SetVersionInfo(version, time.Now().String())
+	cmd.SetVersionInfo(cmd.Version, time.Now().String())
 	cmd.Execute()
 }

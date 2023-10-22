@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	resouceNotSelected   = color.Green.Sprint("resource not seleced")
-	exitSelected         = color.Green.Sprintf("exit seleced")
+	resouceNotSelected   = color.Green.Sprint("resource not selected")
+	exitSelected         = color.Green.Sprintf("exit selected")
 	notFound             = color.Green.Sprintf("not found target resource")
 	s                    = spinner.New(spinner.CharSets[14], 100*time.Millisecond)
 	exitOpt              = color.Red.Sprintf("%s", "exit (cancel terraform plan)")
@@ -26,5 +26,5 @@ var (
 )
 
 func notExecuted(action string) string {
-	return color.Green.Sprintf("%s exit seleced", action)
+	return color.Green.Sprintf("%s exit selected", action)
 }

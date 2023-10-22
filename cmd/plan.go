@@ -30,7 +30,7 @@ var planCmd = &cobra.Command{
 
 		selected := make([]string, 0, 100)
 		items, _ := cmd.Flags().GetInt("items")
-		if err := survey.AskOne(&survey.MultiSelect{Message: "Select resources to target destroy:", Options: options, IgnoreCheckItem: exitOpt, HideFilter: true}, &selected, survey.WithPageSize(items)); err != nil {
+		if err := survey.AskOne(&survey.MultiSelect{Message: "Select resources to target plan:", Options: options, IgnoreCheckItem: exitOpt, HideFilter: true}, &selected, survey.WithPageSize(items)); err != nil {
 			return fmt.Errorf("select resource :%w", err)
 		}
 		if len(selected) == 0 {

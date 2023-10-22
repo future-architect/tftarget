@@ -9,11 +9,8 @@ import (
 	"github.com/future-architect/tftarget/cmd"
 )
 
-var (
-	version = "0.0.4"
-)
 
 func main() {
-	cmd.SetVersionInfo(version, time.Now().String())
+	cmd.SetVersionInfo(cmd.Version, time.Now().String())
 	cmd.Execute()
 }

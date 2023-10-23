@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.5](https://github.com/future-architect/tftarget/compare/v0.0.4...v0.0.5) - 2023-10-22
+- [add version file] by @orangekame3 in https://github.com/future-architect/tftarget/pull/20
+- [add] add codeowners by @orangekame3 in https://github.com/future-architect/tftarget/pull/22
+- [fix] fix typo by @orangekame3 in https://github.com/future-architect/tftarget/pull/23
+
 ## [v0.0.4](https://github.com/future-architect/tftarget/compare/v0.0.3...v0.0.4) - 2023-10-14
 - version-up by @orangekame3 in https://github.com/future-architect/tftarget/pull/18
 

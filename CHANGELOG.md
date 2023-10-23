@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.7](https://github.com/future-architect/tftarget/compare/v0.0.6...v0.0.7) - 2023-10-23
+- fix:remove unused fmt by @orangekame3 in https://github.com/future-architect/tftarget/pull/26
+
 ## [v0.0.6](https://github.com/future-architect/tftarget/compare/v0.0.5...v0.0.6) - 2023-10-23
 - fix: SetVersionInfo duplication by @orangekame3 in https://github.com/future-architect/tftarget/pull/24
 

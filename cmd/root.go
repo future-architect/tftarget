@@ -29,11 +29,3 @@ func Execute() {
 		os.Exit(1)
 	}
 }
-
-func init() {
-
-}
-
-func SetVersionInfo(version, date string) {
-	rootCmd.Version = fmt.Sprintf("%s (Built on %s)", version, date)
-}

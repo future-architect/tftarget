@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/future-architect/tftarget/compare/v0.0.5...v0.0.6) - 2023-10-23
+- fix: SetVersionInfo duplication by @orangekame3 in https://github.com/future-architect/tftarget/pull/24
+
 ## [v0.0.5](https://github.com/future-architect/tftarget/compare/v0.0.4...v0.0.5) - 2023-10-22
 - [add version file] by @orangekame3 in https://github.com/future-architect/tftarget/pull/20
 - [add] add codeowners by @orangekame3 in https://github.com/future-architect/tftarget/pull/22

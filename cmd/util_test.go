@@ -210,6 +210,10 @@ func Test_genTargetCmd(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			// The --executable flag is a persistent flag set by the root command, but because the default value of it
+			// is not passed to the command because it was not executed through the root command, the flag is set here
+			// as flag with the expected test value set as default value.
+			tt.cmd.Flags().String("executable", "terraform", "")
 			got := genTargetCmd(tt.cmd, tt.action, tt.input)
 			if diff := cmp.Diff(got.String(), tt.want); diff != "" {
 				t.Errorf("genTargetCmd (-got +want):%s", diff)

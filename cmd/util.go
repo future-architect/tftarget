@@ -102,11 +102,23 @@ func slice2String(slice []string) string {
 }
 
 func genTargetCmd(cmd *cobra.Command, action, target string) bytes.Buffer {
-	var buf bytes.Buffer
-	buf.WriteString("terraform " + action + " -target=" + target)
-	p, _ := cmd.Flags().GetInt("parallel")
-	buf.WriteString(fmt.Sprintf(" --parallelism=%d", p))
-	return buf
+  var buf bytes.Buffer
+  buf.WriteString("terraform " + action)
+  target = strings.TrimSpace(target)
+  if strings.HasPrefix(target, "{") && strings.HasSuffix(target, "}") {
+    // Handle matrix of targets
+    target = strings.Trim(target, "{}") // Remove surrounding braces
+    targetList := strings.Split(target, ",")
+    for _, t := range targetList {
+      buf.WriteString(" -target=" + strings.TrimSpace(t))
+      }
+  } else {
+    // Handle single target
+    buf.WriteString(" -target=" + target)
+  }
+  p, _ := cmd.Flags().GetInt("parallel")
+  buf.WriteString(fmt.Sprintf(" --parallelism=%d", p))
+  return buf
 }
 
 func isYes(reader *bufio.Reader) bool {

@@ -24,10 +24,12 @@ func executePlan(cmd *cobra.Command, option string) ([]string, error) {
 	if err := validateFlagValue(action, validValues); action != "" && err != nil {
 		return nil, err
 	}
+
+	executable, _ := cmd.Flags().GetString("executable")
 	p, _ := cmd.Flags().GetInt("parallel")
-	planCmd := exec.Command("terraform", "plan", "-no-color", fmt.Sprintf("--parallelism=%d", p))
+	planCmd := exec.Command(executable, "plan", "-no-color", fmt.Sprintf("--parallelism=%d", p))
 	if option != "" {
-		planCmd = exec.Command("terraform", "plan", option, "-no-color", fmt.Sprintf("--parallelism=%d", p))
+		planCmd = exec.Command(executable, "plan", option, "-no-color", fmt.Sprintf("--parallelism=%d", p))
 	}
 
 	out, err := planCmd.CombinedOutput()

@@ -105,7 +105,8 @@ func slice2String(slice []string) string {
 
 func genTargetCmd(cmd *cobra.Command, action, target string) bytes.Buffer {
   var buf bytes.Buffer
-  buf.WriteString("terraform " + action)
+  executable, _ := cmd.Flags().GetString("executable")
+  buf.WriteString(executable + " " + action)
   target = strings.TrimSpace(target)
   if strings.HasPrefix(target, "{") && strings.HasSuffix(target, "}") {
     // Handle matrix of targets

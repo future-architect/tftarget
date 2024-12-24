@@ -189,4 +189,5 @@ tftarget apply -s false
 ```
 
 ## License
-MIT
+
+[MIT](./LICENSE)

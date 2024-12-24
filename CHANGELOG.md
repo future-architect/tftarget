@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.8](https://github.com/future-architect/tftarget/compare/v0.0.7...v0.0.8) - 2024-12-24
+- Add parameter for terraform executable (for compatibility with OpenTofu) by @zekroTJA in https://github.com/future-architect/tftarget/pull/31
+- Fix genTargetCmd function to deal with multiple and single selections by @jmonfar in https://github.com/future-architect/tftarget/pull/32
+
 ## [v0.0.7](https://github.com/future-architect/tftarget/compare/v0.0.6...v0.0.7) - 2023-10-23
 - fix:remove unused fmt by @orangekame3 in https://github.com/future-architect/tftarget/pull/26
 

@@ -1,11 +1,13 @@
-# This is an example .goreleaser.yml file with some sensible defaults.
-# Make sure to check the documentation at https://goreleaser.com
+# .goreleaser.yml
+version: 2
+# Before section
 before:
   hooks:
-    # You may remove this if you don't use go modules.
+    # Ensure go modules are tidy
     - go mod tidy
-    # you may remove this if you don't need go generate
+    # Optionally, run go generate if needed
     - go generate ./...
+# Builds section
 builds:
   - env:
       - CGO_ENABLED=0
@@ -13,34 +15,38 @@ builds:
       - linux
       - windows
       - darwin
-
+    # Add additional build configurations as needed
+# Archives section
 archives:
-  - format: tar.gz
-    # this name template makes the OS and Arch compatible with the results of uname.
+  - id: tar_gz
+    format: tar.gz
+    # Customize archive name based on OS and Arch
     name_template: >-
-      {{ .ProjectName }}_
-      {{- title .Os }}_
-      {{- if eq .Arch "amd64" }}x86_64
-      {{- else if eq .Arch "386" }}i386
-      {{- else }}{{ .Arch }}{{ end }}
-      {{- if .Arm }}v{{ .Arm }}{{ end }}
-    # use zip for windows archives
-    format_overrides:
-    - goos: windows
-      format: zip
+      {{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}
+  - id: zip
+    format: zip
+    # Format override for Windows
+    name_template: >-
+      {{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}
+# Checksum section
 checksum:
-  name_template: 'checksums.txt'
+  name_template: "checksums.txt"
+# Snapshot section
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
+# Changelog section
 changelog:
   sort: asc
   filters:
     exclude:
-      - '^docs:'
-      - '^test:'
-
+      - "^docs:"
+      - "^test:"
+# Brews section (if applicable)
 brews:
-  - tap:
+  - 
+    ids:
+      - tar_gz
+    repository:
       owner: future-architect
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"

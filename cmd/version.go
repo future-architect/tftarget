@@ -25,7 +25,7 @@ package cmd
 import "fmt"
 
 // Version is a version of this application.
-const Version = "0.0.8"
+const Version = "0.0.9"
 
 // SetVersionInfo sets version and date to rootCmd
 func SetVersionInfo(version, date string) {

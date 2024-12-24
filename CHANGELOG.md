@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.9](https://github.com/future-architect/tftarget/compare/v0.0.8...v0.0.9) - 2024-12-24
+- add license link by @orangekame3 in https://github.com/future-architect/tftarget/pull/34
+
 ## [v0.0.8](https://github.com/future-architect/tftarget/compare/v0.0.7...v0.0.8) - 2024-12-24
 - Add parameter for terraform executable (for compatibility with OpenTofu) by @zekroTJA in https://github.com/future-architect/tftarget/pull/31
 - Fix genTargetCmd function to deal with multiple and single selections by @jmonfar in https://github.com/future-architect/tftarget/pull/32
